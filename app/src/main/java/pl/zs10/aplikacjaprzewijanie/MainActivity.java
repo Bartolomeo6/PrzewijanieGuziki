@@ -75,6 +75,11 @@ public class MainActivity extends AppCompatActivity {
         wDol = findViewById(R.id.imageButton2);
         textView = findViewById(R.id.textView);
 
+        if(savedInstanceState != null) {
+               punkty = savedInstanceState.getInt("PUNKTY");
+               textView.setText(punkty.toString());
+        }
+
         wGore.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
